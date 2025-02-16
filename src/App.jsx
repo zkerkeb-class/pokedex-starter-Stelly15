@@ -1,29 +1,42 @@
-import pokemons from './assets/pokemons'
-import PokemonCard from './components/PokemonCard'
-import './App.css'
-
-const bulbasaur = pokemons[0]
-
-console.log("🚀 ~ bulbasaur:", bulbasaur)
-console.log("🚀 ~ bulbasaur.name.french:", bulbasaur.name.french)
-console.log("🚀 ~ bulbasaur.base.Attack:", bulbasaur.base.Attack)
-console.log("🚀 ~ bulbasaur.base.Defense:", bulbasaur.base.Defense)
-console.log("🚀 ~ bulbasaur.base.HP:", bulbasaur.base.HP)
+import React, { useState } from 'react';
+import pokemons from './assets/pokemons';
+import PokemonCard from './components/pokemonCard';
+import './App.css';
 
 function App() {
+  const [search, setSearch] = useState('');
+
+  const handleSearchChange = (event) => {
+    setSearch(event.target.value);
+  };
+
+  const filteredPokemons = pokemons.filter(pokemon =>
+    pokemon.name.french.toLowerCase().startsWith(search.toLowerCase())
+  );
+
   return (
     <div>
-      
-        <PokemonCard 
-          name={bulbasaur.name.french} 
-          image={bulbasaur.image}
-          attack={bulbasaur.base.Attack} 
-          defense={bulbasaur.base.Defense}
-          hp={bulbasaur.base.HP}
-        />
-
+      <input 
+        type="text" 
+        placeholder="Search Pokémon" 
+        value={search} 
+        onChange={handleSearchChange} 
+      />
+      <div className="pokemon-container">
+        {filteredPokemons.map((pokemon, index) => (
+          <PokemonCard 
+            key={index}
+            name={pokemon.name.french} 
+            image={pokemon.image}
+            types={pokemon.type}
+            attack={pokemon.base.Attack} 
+            defense={pokemon.base.Defense}
+            hp={pokemon.base.HP}
+          />
+        ))}
+      </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

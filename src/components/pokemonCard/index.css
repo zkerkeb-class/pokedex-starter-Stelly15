@@ -1,0 +1,81 @@
+.pokemon-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.pokemon-card {
+    border: 5px solid #808080; /* Thicker grey border */
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px; /* Rounded corners */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    background-color: #fff; /* White background */
+    color: #000; /* Black text color */
+    height: 350px; /* Adjust card height */
+    width: 250px; /* Adjust card width */
+    text-align: center; /* Center text */
+}
+
+.pokemon-name {
+    font-size: 15px;
+    font-weight: bold;
+    color: #000; /* Black text color */
+    text-align: left;
+    margin-left: 10px; /* Move name slightly to the left */
+}
+.pokemon-info {
+    font-size: 10x; /* Smaller font size for Pokemon information */
+    margin: 5px 0; /* Reduce the margin between elements */
+    text-size-adjust: 5px; /* Allow text to be resized */
+    line-height: 1.2px;
+}
+.pokemon-name-container {
+    display: flex;
+    justify-content: flex-start; /* Align name to the left */
+    align-items: center;
+    width: 100%;
+}
+.image-container {
+    border: 2px solid #808080; /* Thicker grey border */
+    padding: 0.5px;
+    margin: 5px;
+    border-radius: 3px; /* Rounded corners */
+    height: 500px; /* Adjust card height */
+    width: 250px; /* Adjust card width */
+}
+
+.pokemon-image {
+    width: 100px;
+    height: 100px;
+    padding-left: 5px; /* Add padding inside the border */
+    background-color: #fff; /* White background for the rectangle */ 
+}
+
+.pokemon-types-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.pokemon-types-container > *:not(:first-child) {
+    margin-left: 10px;
+}
+
+.pokemon-stats-container {
+    font-size: 15px;
+    line-height: 0.5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center stats horizontally */
+    width: 100%;
+}
+
+.button-container {
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
