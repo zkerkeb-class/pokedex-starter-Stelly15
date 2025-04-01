@@ -1,106 +1,38 @@
-.pokemon-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-
-.pokemon-card {
-    border: 5px solid #808080; /* Thicker grey border */
+.pokemon-card{
+    border: 4px solid #d4d0d7;
     padding: 10px;
-    margin: 10px;
-    border-radius: 8px; /* Rounded corners */
+
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    background-color: #fff; /* White background */
-    color: #000; /* Black text color */
-    height: 350px; /* Adjust card height */
-    width: 250px; /* Adjust card width */
-    text-align: center; /* Center text */
-    position: relative; /* For positioning the types container */
 }
 
-.pokemon-name {
+.pokemon-name{
     font-size: 20px;
     font-weight: bold;
-    color: #000; 
-    text-align: left;
-    margin-left: 10px; 
 }
 
-.pokemon-name-container {
-    display: flex;
-    justify-content: flex-start; /* Align name to the left */
-    align-items: center;
-    width: 100%;
+.pokemon-name-container{
+display: flex;
+justify-content: flex-start;
+align-items: center;
 }
 
-.image-container {
-    border: 2px solid #808080;
-    padding: 1px;
-    margin: 1px;
-    border-radius: 8px; /* Rounded corners */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;
-    height: 150px; 
-    width: 250px; 
-    text-align: center;
+.pokemon-image{
+    width: 200px;
+    height: 200px;
 }
-.pokemon-image {
-    width: 150px;
-    height: 150px;
+
+.pokemon-types-container{
+    display: flex;
     
-    background-color: #fff; 
-}
-
-.pokemon-types-container {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    justify-content: flex-end;
-    width: auto;
 }
 
 .pokemon-types-container > *:not(:first-child) {
     margin-left: 10px;
 }
 
-.pokemon-stats-container {
-    font-size: 15px;
-    line-height: 1px;
+.pokemon-stats-container{
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center stats horizontally */
-    width: 100%;
 }
-.pokemon-stats-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-.stat-row {
-display: flex;
-justify-content: space-between;
-width: 100%;
-}
-
-.stat-label {
-text-align: center;
-flex: 1;
-}
-
-.stat-value {
-text-align: right;
-flex: 1;
-}
-
-/*.button-container {
-    font-size: 15px;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}*/
